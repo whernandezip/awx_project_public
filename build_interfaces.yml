@@ -1,5 +1,5 @@
 ---
-    - name: build interfaces
+  - name: build interfaces
         
         tasks: 
             - ios_command: 
