@@ -1,6 +1,6 @@
 ---
   - name: build interfaces
-    valid_playbook_re = re.compile(r'^\s*?-?\s*?(?:hosts|include|import_playbook):\s*?.*?$')
+    import_playbook
             
         tasks: 
             - ios_command: 
