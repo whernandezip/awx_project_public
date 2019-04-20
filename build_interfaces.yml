@@ -1,6 +1,6 @@
 ---
   - name: build interfaces
-    import_playbook
+    hosts: 10.42.254.1
             
         tasks: 
             - ios_command: 
