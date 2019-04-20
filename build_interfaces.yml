@@ -1,8 +1,7 @@
 ---
   - name: build interfaces
     valid_playbook_re = re.compile(r'^\s*?-?\s*?(?:hosts|include|import_playbook):\s*?.*?$')
-    valid_inventory_re = re.compile(r'^[a-zA-Z0-9_.=\[\]]')
-        
+            
         tasks: 
             - ios_command: 
                   commands: show running-config all
