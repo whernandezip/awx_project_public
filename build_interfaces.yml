@@ -1,6 +1,7 @@
 ---
   - name: build interfaces
-    hosts: 10.42.254.1
+    valid_playbook_re = re.compile(r'^\s*?-?\s*?(?:hosts|include|import_playbook):\s*?.*?$')
+    valid_inventory_re = re.compile(r'^[a-zA-Z0-9_.=\[\]]')
         
         tasks: 
             - ios_command: 
