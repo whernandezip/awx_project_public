@@ -2,8 +2,7 @@
   - name: build interfaces
     hosts: 10.42.254.1
             
-        tasks: 
-            - ios_command: 
+           - ios_command: 
                   commands: show running-config all
                   provider: "{{cli}}" 
                   register: config 
