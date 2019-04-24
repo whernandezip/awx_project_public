@@ -1,5 +1,4 @@
 ---
-- name: build interfaces 
   hosts: 10.42.254.1
   connection: network_cli
   tasks:
