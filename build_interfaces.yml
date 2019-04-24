@@ -18,5 +18,4 @@
     - ios_command:
       commands: show lldp neighbors GigabitEthernet0/1 detail
       waitfor:  "result{0} contains 'System Name: iosxr02.eng.ansible.com"
-      provider  "{{ cli }}"
-      
+      provider:  "{{ cli }}"
