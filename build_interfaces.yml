@@ -2,6 +2,7 @@
 - name: build interfaces 
   hosts: 10.42.254.1
   connection: network_cli
+  ansible_network_os: ios
   tasks:
   - name: run show version on remote devices
     ios_command:
