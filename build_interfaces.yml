@@ -2,22 +2,11 @@
 - name: build interfaces 
   hosts: 10.42.254.1
   tasks:
-    ios_command: 
-      commands:
-        command: show running-config all
-        provider: "{{ cli }}" 
-        register: config 
-    ios_config:
-      lines:
-      - description test-ansible port
-      - switchport mode access
-      - spanning-tree portfast 
-      - no shut
-      parents: interface GigabitEthernet2/0/31
-      config:  "{{ config.stdout[0] }}"
-      provider: "{{ cli}}"
-    ios_command: 
-      commands:
-      command: show lldp neighbors GigabitEthernet0/1 detail
-      waitfor:  "result{0} contains 'System Name: iosxr02.eng.ansible.com"
-      provider:  "{{ cli }}"
+  - name: run show version on remote devices
+    ios_command:
+      commands: show version
+
+  - name: run show version and check to see if output contains IOS
+    ios_command:
+      commands: show version
+      wait_for: result[0] contains IOS
