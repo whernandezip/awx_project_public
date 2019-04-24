@@ -1,0 +1,8 @@
+---
+- name: Show version
+  hosts: 10.42.254.1
+  connection: network_cli
+  tasks:
+  - name: run show version on remote devices
+    ios_command:
+      commands: show version
