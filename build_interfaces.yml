@@ -2,12 +2,12 @@
 - name: build interfaces 
   hosts: 10.42.254.1
   tasks:
-    - ios_command: 
+    ios_command: 
       commands:
         command: show running-config all
         provider: "{{ cli }}" 
         register: config 
-    - ios_config:
+    ios_config:
       lines:
       - description test-ansible port
       - switchport mode access
@@ -16,8 +16,8 @@
       parents: interface GigabitEthernet2/0/31
       config:  "{{ config.stdout[0] }}"
       provider: "{{ cli}}"
-    - ios_command: 
+    ios_command: 
       commands:
-        command: show lldp neighbors GigabitEthernet0/1 detail
+      command: show lldp neighbors GigabitEthernet0/1 detail
       waitfor:  "result{0} contains 'System Name: iosxr02.eng.ansible.com"
       provider:  "{{ cli }}"
