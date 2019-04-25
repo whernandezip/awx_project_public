@@ -5,6 +5,5 @@
   
   tasks:
   - name: run show version on remote devices
-    ansible_network_os: ios
     ios_command:
       commands: show version
