@@ -28,6 +28,20 @@
     mode: access
     access_vlan: 1132
     
+    - name: Add interfaces to VLAN
+  ios_vlan:
+    vlan_id: 1132
+    interfaces:
+      - GigabitEthernet1/0/7
+      - GigabitEthernet2/0/7
+
+- name: Check if interfaces is assigned to VLAN
+  ios_vlan:
+    vlan_id: 100
+    associated_interfaces:
+      - GigabitEthernet0/0
+      - GigabitEthernet0/1
+    
     - name: Create an (SVI) IPv4 address
   net_l3_interface:
     name: vlan1132
