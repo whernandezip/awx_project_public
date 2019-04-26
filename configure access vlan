@@ -1,0 +1,8 @@
+
+
+
+ - name: Ensure GigabitEthernet0/5 is configured for access vlan 1132
+  ios_l2_interface:
+    name: GigabitEthernet1/0/7
+    mode: access
+    access_vlan: 1132
