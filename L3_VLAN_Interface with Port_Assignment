@@ -8,16 +8,16 @@
   tasks:
   - name: configure VLAN ID and name
   net_vlan:
-    vlan_id: 132
-    name: test-vlan
+    vlan_id: 1132
+    name: PI_Telecom-VoiceGateway
     
-    - name: Ensure GigabitEthernet0/5 is configured for access vlan 20
+    - name: Ensure GigabitEthernet0/5 is configured for access vlan 1132
   ios_l2_interface:
     name: GigabitEthernet0/5
     mode: access
-    access_vlan: 20
+    access_vlan: 1132
     
-    - name: Create an SVI in switch
+    - name: Create an SVI 
   net_l3_interface:
     name: vlan1132
     ipv4: 192.168.0.1/24
