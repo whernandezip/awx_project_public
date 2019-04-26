@@ -26,20 +26,12 @@
 
 - name: Check if interfaces is assigned to VLAN
   ios_vlan:
-    vlan_id: 100
+    vlan_id: 1132
     associated_interfaces:
-      - GigabitEthernet0/0
-      - GigabitEthernet0/1
+      - GigabitEthernet1/0/7
+      - GigabitEthernet2/0/7
     
 - name: Create an (SVI) IPv4 address
   net_l3_interface:
     name: vlan1132
     ipv4: 10.32.32.1/24
-    
-   
-
-    
-    
-     
-      
-      
