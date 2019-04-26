@@ -1,0 +1,37 @@
+---
+- name: L3_VLAN_Interface with Port_Assignment_YUM2
+  
+  hosts: all
+  
+  connection: network_cli
+  
+- name: Create vlan
+  ios_vlan:
+    vlan_id: 1132
+    name: PI_Telecom-VoiceGateway
+    state: present
+       
+- name: Add interface using aggregate
+  ios_interface:
+    aggregate:
+    - { name: GigabitEthernet1/0/22, description: VoiceGateway_430_Port1 }
+    - { name: GigabitEthernet2/0/22, description: VoiceGateway_430_Port2 }
+    
+- name: Add interfaces to VLAN
+  ios_vlan:
+    vlan_id: 1132
+    interfaces:
+      - GigabitEthernet1/0/22
+      - GigabitEthernet2/0/22
+
+- name: Check if interfaces is assigned to VLAN
+  ios_vlan:
+    vlan_id: 1132
+    associated_interfaces:
+      - GigabitEthernet0/0
+      - GigabitEthernet0/1
+    
+- name: Create an (SVI) IPv4 address
+  net_l3_interface:
+    name: vlan1132
+    ipv4: 10.40.32.1/24
