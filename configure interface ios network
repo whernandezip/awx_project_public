@@ -1,0 +1,7 @@
+
+
+- name: configure interface
+ 
+  ios_interface:
+    name: GigabitEthernet1/0/7
+    description: VoiceGateway_430_Port1
