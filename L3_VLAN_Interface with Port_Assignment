@@ -1,5 +1,5 @@
 ---
-- name: ios version output
+- name: L3_VLAN_Interface with Port_Assignment
   
   hosts: all
   
@@ -17,7 +17,7 @@
     mode: access
     access_vlan: 1132
     
-    - name: Create an SVI 
+    - name: Create an (SVI) IPv4 address
   net_l3_interface:
     name: vlan1132
     ipv4: 192.168.0.1/24
