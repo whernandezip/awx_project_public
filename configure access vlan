@@ -1,5 +1,11 @@
-
-
+---
+- name: ios version output
+  
+  hosts: all
+  
+  connection: network_cli
+  
+  tasks:
 
  - name: Ensure GigabitEthernet0/5 is configured for access vlan 1132
   ios_l2_interface:
