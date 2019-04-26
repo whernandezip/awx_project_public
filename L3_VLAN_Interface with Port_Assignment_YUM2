@@ -28,8 +28,8 @@
   ios_vlan:
     vlan_id: 1132
     associated_interfaces:
-      - GigabitEthernet0/0
-      - GigabitEthernet0/1
+      - GigabitEthernet1/0/22
+      - GigabitEthernet2/0/22
     
 - name: Create an (SVI) IPv4 address
   net_l3_interface:
