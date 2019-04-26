@@ -1,9 +1,9 @@
 ---
 - name: ios version output
   
-  hosts 10.42.254.1
-  hosts 10.42.254.25
-  hosts 10.42.254.26
+  hosts: 10.42.254.1
+  hosts: 10.42.254.25
+  hosts: 10.42.254.26
   
   connection: network_cli
   
