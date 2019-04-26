@@ -1,9 +1,9 @@
 ---
 - name: ios version output
-  [hosts]
-  10.42.254.1
-  10.42.254.25
-  10.42.254.26
+  [Miramar2_Network_Devices]
+  ansible_host=10.42.254.1
+  ansible_host=10.42.254.25
+  ansible_host=10.42.254.26
   
   connection: network_cli
   
