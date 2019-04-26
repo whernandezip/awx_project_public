@@ -1,7 +1,12 @@
-
+---
+- name: ios version output
+  
+  hosts: all
+  
+  connection: network_cli
 
 - name: configure interface
  
   ios_interface:
     name: GigabitEthernet1/0/7
-    description: VoiceGateway_430_Port1
+    description: Device_name
