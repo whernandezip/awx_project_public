@@ -1,5 +1,6 @@
 ---
 - name: ios version output
+  gather facts: false
   
   hosts: all
   
