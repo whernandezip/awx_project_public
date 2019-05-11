@@ -6,6 +6,9 @@
   connection: network_cli
   
   tasks:
+  - ios_facts:
+      gather_subset: !all
+      
   - name: run show version on remote devices
     ios_command:
       commands: show version
