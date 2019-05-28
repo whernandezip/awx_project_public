@@ -7,7 +7,7 @@
   
   tasks:
 
- - name: Ensure GigabitEthernet2/0/35 is configured for access vlan 1142
+ - name: Configured access vlan 1142
   ios_l2_interface:
     name: GigabitEthernet2/0/35
     mode: access
