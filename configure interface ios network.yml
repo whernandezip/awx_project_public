@@ -14,7 +14,7 @@
   - name: configure interface
  
     ios_interface:
-    name: GigabitEthernet2/0/30
+    name: GigabitEthernet2/0/35
     description: Device_name
 
  
