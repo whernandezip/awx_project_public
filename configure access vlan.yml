@@ -7,8 +7,8 @@
   
   tasks:
 
- - name: Ensure GigabitEthernet1/0/7 is configured for access vlan 1132
+ - name: Ensure GigabitEthernet2/0/35 is configured for access vlan 1142
   ios_l2_interface:
-    name: GigabitEthernet1/0/7
+    name: GigabitEthernet2/0/35
     mode: access
-    access_vlan: 1132
+    access_vlan: 1142
