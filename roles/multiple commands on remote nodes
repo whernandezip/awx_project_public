@@ -1,0 +1,12 @@
+---
+- name: ios version output
+    
+  hosts: all
+  
+  connection: network_cli
+  
+  - name: run multiple commands on remote nodes
+    ios_command:
+      commands:
+        - show version
+        - show interfaces
