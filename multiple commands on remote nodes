@@ -1,0 +1,8 @@
+
+
+
+- name: run multiple commands on remote nodes
+    ios_command:
+      commands:
+        - show version
+        - show interfaces
