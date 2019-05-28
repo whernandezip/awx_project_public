@@ -6,9 +6,8 @@
   connection: network_cli
   
   tasks:
-
- - name: Configured access vlan 1142
-  ios_l2_interface:
+  - name: Configured access vlan 1142
+    ios_l2_interface:
     name: GigabitEthernet2/0/35
     mode: access
     access_vlan: 1142
