@@ -5,8 +5,16 @@
   
   connection: network_cli
 
-- name: configure interface
+  - name: run multiple commands on remote nodes
+    ios_command:
+      commands:
+        - show version
+        - show interfaces
+        
+  - name: configure interface
  
-  ios_interface:
-    name: GigabitEthernet1/0/7
+    ios_interface:
+    name: GigabitEthernet2/0/30
     description: Device_name
+
+ 
