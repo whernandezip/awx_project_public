@@ -5,7 +5,7 @@
   
   connection: network_cli
   
-- name: run multiple commands on remote nodes
+  - name: run multiple commands on remote nodes
     ios_command:
       commands:
         - show version
